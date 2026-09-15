@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 8%;
+    --muted: 210 16% 93%;
+    --muted-foreground: 215 16% 40%;
+    --border: 214 20% 88%;
+    --accent: 168 84% 36%;
+    --accent-foreground: 0 0% 100%;
+    --secondary: 199 89% 48%;
+    --ring: 168 84% 36%;
+    --glow: 168 100% 50%;
+    --surface: 210 25% 96%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 96%;
+    --card: 222 40% 8%;
+    --card-foreground: 210 40% 96%;
+    --muted: 217 28% 12%;
+    --muted-foreground: 215 16% 65%;
+    --border: 217 24% 16%;
+    --accent: 168 84% 48%;
+    --accent-foreground: 222 47% 5%;
+    --secondary: 199 89% 58%;
+    --ring: 168 84% 48%;
+    --glow: 168 100% 55%;
+    --surface: 222 36% 9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01" on, "cv11" on;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-orb {
+    background: radial-gradient(
+      circle,
+      hsl(var(--glow) / 0.35) 0%,
+      hsl(var(--secondary) / 0.12) 40%,
+      transparent 70%
+    );
+  }
+
+  .grid-fade {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+  }
+}
