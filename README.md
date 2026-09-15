@@ -1,3 +1,6 @@
+?? Live Demo: https://nexlify-saas.vercel.app/
+?? Get the Full Commercial License: https://musaata.gumroad.com/l/stjrok
+
 # Nexlify — SaaS Landing Page Template
 
 Modern, high-converting Next.js SaaS landing page template ready for Vercel.
@@ -49,3 +52,4 @@ src/
 | `npm run build` | Production build         |
 | `npm run start` | Start production server  |
 | `npm run lint`  | Run ESLint               |
+
